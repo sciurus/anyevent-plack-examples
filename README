@@ -5,8 +5,8 @@ Some of the key Perl technologies are
 AnyEvent https://metacpan.org/module/AnyEvent::Intro - A framework for event-based programming
 PSGI http://plackperl.org/ - An interface between web applications and servers
 Plack http://plackperl.org/ - Low-level modules for using PSGI
-Twiggy - AnyEvent HTTP server for PSGI
-Mojolicious - A web framework that comes both with its own AnyEvent-compatible server and PSGI compatibilty
+Twiggy https://metacpan.org/module/Twiggy - AnyEvent HTTP server for PSGI
+Mojolicious  http://mojolicio.us/ - A web framework that comes both with its own AnyEvent-compatible server and PSGI compatibilty
 
 http:       DONE
 httpplus:   DONE
