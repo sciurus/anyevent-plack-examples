@@ -40,7 +40,7 @@ my $timer = AnyEvent->timer(
 
 get '/' => sub {
     my $self = shift;
-    $self->stash(elapsed_time => $elapsed_time, tweets_seen => $tweets_seen);
+    $self->stash( elapsed_time => $elapsed_time, tweets_seen => $tweets_seen );
     $self->render('index');
 };
 
