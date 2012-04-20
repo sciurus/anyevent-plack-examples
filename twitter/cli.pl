@@ -42,12 +42,10 @@ my $timer = AnyEvent->timer(
 
 # signal handlers take function name
 # instead of being references to functions
-sub unloop {
-    say "\nSaw $tweets_seen tweets in $elapsed_time seconds";
-    $condition->send;
-}
-
+sub unloop { $condition->send; }
 $SIG{INT} = 'unloop';
 
-# start the event loop
+# start waiting in event loop
 $condition->recv;
+
+say "\nSaw $tweets_seen tweets in $elapsed_time seconds";
