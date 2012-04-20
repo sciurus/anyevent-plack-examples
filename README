@@ -1,9 +1,18 @@
-Semmy Purewal used some twitter api examples to demonstrate node.js. I decided to try reimplementing some of them in perl.
+Semmy Purewal gave a talk to my local linux users group with some nice demonstrations of node.js. I decided to try reimplementing some of them in perl.
 
-echo:       TODO, anyevent
-http:       TODO, plack
-httpplus:   TODO, plack and anyevent
-redis:      TODO, mojolicious and anyevent
-socket.io:  TODO, mojolicious and anyevent
+Some of the key Perl technologies are
+
+AnyEvent https://metacpan.org/module/AnyEvent::Intro - A framework for event-based programming
+PSGI http://plackperl.org/ - An interface between web applications and servers
+Plack http://plackperl.org/ - Low-level modules for using PSGI
+Twiggy - AnyEvent HTTP server for PSGI
+Mojolicious - A web framework that comes both with its own AnyEvent-compatible server and PSGI compatibilty
+
+http:       DONE
+httpplus:   DONE
+twitter:    DONE, both a web and a cli version
+echo:       TODO
+redis:      TODO
+socket.io:  TODO 
 
 https://github.com/semmypurewal/node-talk-examples/
