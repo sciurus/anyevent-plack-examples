@@ -1,0 +1,9 @@
+Semmy Purewal used some twitter api examples to demonstrate node.js. I decided to try reimplementing some of them in perl.
+
+echo:       TODO, anyevent
+http:       TODO, plack
+httpplus:   TODO, plack and anyevent
+redis:      TODO, mojolicious and anyevent
+socket.io:  TODO, mojolicious and anyevent
+
+https://github.com/semmypurewal/node-talk-examples/
