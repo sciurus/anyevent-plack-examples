@@ -8,34 +8,30 @@ use AnyEvent;
 use AnyEvent::Handle;
 use AnyEvent::Socket;
 
-sub echo {
-    my ( $fh, $host, $port ) = @_;
+my $guard = tcp_server(
+    '127.0.0.1',
+    3000,
+    sub {
+        my ( $fh, $host, $port ) = @_;
 
-    say 'accepted connection';
+        say 'accepted connection';
 
-    my $handle = AnyEvent::Handle->new(
-        fh       => $fh,
-        on_error => sub {
-            my ( $handle, $fatal, $message ) = @_;
-            say "error occured, it was $message";
-        },
-        on_eof => sub {
-            my $handle = shift;
-            $handle->destroy();
-            say 'connection closed';
-        },
-        on_read => sub {
-            my $handle = shift;
-            my $buffer = $handle->{rbuf};
-            $handle->push_write($buffer);
-            $handle->{rbuf} = '';
-            say 'buffer written!';
-        },
-    );
-
-}
-
-my $guard = tcp_server( '127.0.0.1', 3000, \&echo );
+        my $handle;
+        $handle = AnyEvent::Handle->new(
+            fh      => $fh,
+            on_read => sub {
+                my $buffer = $handle->{rbuf};
+                $handle->push_write($buffer);
+                $handle->{rbuf} = '';
+                say 'buffer written!';
+            },
+            on_eof => sub {
+                $handle->destroy();
+                say 'connection closed';
+            },
+        );
+    }
+);
 
 say 'listening on port 3000';
 
