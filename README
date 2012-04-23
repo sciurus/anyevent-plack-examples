@@ -12,7 +12,7 @@ echo:       DONE
 http:       DONE
 httpplus:   DONE
 twitter:    DONE
-redis:      TODO
+redis:      DONE
 socket.io:  TODO 
 
 https://github.com/semmypurewal/node-talk-examples/
