@@ -8,10 +8,10 @@ Plack http://plackperl.org/ - Low-level modules for using PSGI
 Twiggy https://metacpan.org/module/Twiggy - AnyEvent HTTP server for PSGI
 Mojolicious  http://mojolicio.us/ - A web framework that comes both with its own AnyEvent-compatible server and PSGI compatibilty
 
+echo:       DONE
 http:       DONE
 httpplus:   DONE
-twitter:    DONE, both a web and a cli version
-echo:       TODO
+twitter:    DONE
 redis:      TODO
 socket.io:  TODO 
 
