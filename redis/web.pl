@@ -58,7 +58,7 @@ get '/' => sub {
         @keyword_list,
         sub {
             # results are returned in an array reference
-            my @wordcounts = @{ @_[0] };
+            my @wordcounts = @{ $_[0] };
             my %word_to_count;
             for ( my $i = 0 ; $i < @keyword_list ; $i++ ) {
                 $word_to_count{ $keyword_list[$i] } = $wordcounts[$i];
